@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E18083.MainPage"
+             Title=""
+             BackgroundColor="LightSkyBlue">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="IMAGEN SITIO VISITADO" 
+                   HorizontalTextAlignment="Center" 
+                   FontAttributes="Bold"
+                   FontSize="20" 
+                   Padding="10"/>
+
+            <Image Source="{Binding Persona.Foto}" 
+                   HeightRequest="200" 
+                   WidthRequest="200"  
+                   Margin="20,0,20,0"
+                   BackgroundColor="Azure"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   x:Name="foto"/>
+
+            <Button x:Name="btnfoto" 
+                    Text="Tomar" 
+                    Clicked="btnfoto_Clicked"
+                    BackgroundColor="LightGreen" 
+                    TextColor="Black"
+                    CornerRadius="10"
+                    HeightRequest="40"
+                    WidthRequest="100"/>
+
+            <Entry Keyboard="Text" 
+                   Placeholder="" 
+                   x:Name="lati" 
+                   IsReadOnly="True"/>
+
+            <Entry Keyboard="Text" 
+                   Placeholder="" 
+                   x:Name="longi" 
+                   IsReadOnly="True"/>
+
+            <Entry Keyboard="Text" 
+                   Placeholder="Descripcion/Locacion" 
+                   x:Name="desc"/>
+
+            <Button x:Name="btnAdd"  
+                    Text="Agregar" 
+                    Clicked="btnAdd_Clicked" 
+                    BackgroundColor="LightGreen" 
+                    TextColor="Black"
+                    CornerRadius="10"
+                    HeightRequest="40"
+                    WidthRequest="100"/>
+
+            <Button x:Name="btnListSites" 
+                    Text="Lista de Sitios" 
+                    Clicked="btnListSites_Clicked" 
+                    BackgroundColor="LightGreen" 
+                    TextColor="Black"
+                    CornerRadius="10"
+                    HeightRequest="40"
+                    WidthRequest="100"/>
+
+            <Button x:Name="btnExit" 
+                    Text="Salir" 
+                    Clicked="btnExit_Clicked" 
+                    BackgroundColor="LightGreen" 
+                    TextColor="Black"
+                    CornerRadius="10"
+                    HeightRequest="40"
+                    WidthRequest="100"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
